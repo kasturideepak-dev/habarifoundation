@@ -201,6 +201,14 @@
     prev?.addEventListener("click", () => { clearInterval(timer); show((idx - 1 + slides.length) % slides.length); start(); });
   }
 
+  /* Hero video: respect reduced motion, otherwise nudge autoplay */
+  const heroVideo = document.querySelector(".main-slider__video");
+  if (heroVideo) {
+    heroVideo.muted = true;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) heroVideo.pause();
+    else heroVideo.play()?.catch(() => {});
+  }
+
   /* Causes carousel + filters */
   const track = document.querySelector(".causes-track");
   const viewport = document.querySelector(".causes-carousel");

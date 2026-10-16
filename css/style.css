@@ -390,7 +390,18 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--black);
   overflow: hidden;
 }
-.slider-track { position: relative; min-height: 720px; }
+.main-slider__video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  z-index: 0;
+}
+.main-slider__overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(40,55,52,.55) 0%, rgba(40,55,52,.62) 55%, rgba(40,55,52,.85) 100%);
+  pointer-events: none;
+}
+.slider-track { position: relative; min-height: 720px; z-index: 2; }
 .slide {
   position: absolute; inset: 0;
   opacity: 0; visibility: hidden;
