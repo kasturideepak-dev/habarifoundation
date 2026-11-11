@@ -355,8 +355,8 @@
       img: "images/client/education/reading-02.jpg",
       alt: "Public school children supported by Habari Foundation",
       text: "This program provides education services to children who have no access to school. The targeted children are those from poor families, orphans and street children in Moshi, Kilimanjaro. We support both enrolled students and children who are not yet in school by taking them to class — uniforms, fees and a trusted adult who stays in touch.",
-      raisedLabel: "Sponsor",
-      raised: "$90",
+      raisedLabel: "Covers",
+      raised: "Fees & uniform",
       goalLabel: "Goal",
       goal: "1 year",
       summary1: "Child sponsorship is one of the most effective ways to help children escape poverty. As you exchange letters, send photos and offer encouragement, your care brings hope that can last a lifetime.",
@@ -366,26 +366,26 @@
         "The child writes at least twice a year"
       ],
       summary2: "More than 22 children are currently sponsored in Habari Foundation’s Child Sponsorship Program. We always do a physical assessment of families and schools when selecting children — living standards and real need on the ground.",
-      subject: "Sponsor a public-school child ($90)"
+      subject: "Sponsor a public-school child"
     },
     private: {
       cat: "Education",
       title: "Private school for a child in Kilimanjaro",
       img: "images/client/education/classroom-lesson.jpg",
       alt: "Volunteers visiting a partner school",
-      text: "There are many children waiting for a place in a private classroom. A year of fees, food and a uniform is $750. A secondary student is $956. Temporary teachers in public school cost $400 for four months; one full-time teacher for a year is $1,200.",
-      raisedLabel: "Sponsor",
-      raised: "$750",
-      goalLabel: "Secondary",
-      goal: "$956",
+      text: "There are many children waiting for a place in a private classroom. Sponsorship can cover a year of fees, food and a uniform, for primary and secondary students. Costs depend on the child’s school level and school type — contact our team for current amounts and what each option covers.",
+      raisedLabel: "Covers",
+      raised: "Fees & food",
+      goalLabel: "Levels",
+      goal: "Primary & secondary",
       summary1: "Private-school sponsorship covers fees, food and a uniform so a child can learn in a safer, better-resourced classroom.",
       points: [
-        "Private school: $750 a year for fees, food and uniform",
-        "Secondary student: $956 a year",
-        "A full-time teacher for one year: $1,200"
+        "Private school fees, food and a uniform for a year",
+        "Support for secondary students",
+        "Current costs explained before you commit"
       ],
       summary2: "As we work with school management and local government, we always do a physical assessment of families and schools when selecting children.",
-      subject: "Sponsor a private-school child ($750)"
+      subject: "Sponsor a private-school child"
     },
     health: {
       cat: "Health",
@@ -452,8 +452,8 @@
       text: "Depending on the amount donated, 25% is allocated to students’ needs and 75% pays the costs of the tour. After arrival in Tanzania you spend a day or more in Moshi visiting our children in schools and their families before you start the mountain.",
       raisedLabel: "To students",
       raised: "25%",
-      goalLabel: "From",
-      goal: "$1,350",
+      goalLabel: "Routes",
+      goal: "3",
       summary1: "We welcome group charity tours and solo travellers. A non-refundable registration fee is payable to Habari Foundation at booking.",
       points: [
         "25% of each climb donation goes to students’ needs",
@@ -655,10 +655,10 @@
       header: "images/habari-foundation-5-Days-Marangu-Charity-Tour-scaled.jpg",
       img1: "images/habari-foundation-5-Days-Marangu-Charity-Tour-scaled.jpg",
       img2: "images/Habari-Foundation-marangu.jpg",
-      text1: "The oldest and most popular route. Hut accommodation. Same charity model: visit children in Moshi, then climb. Group prices start from $1,350 per person for five or more.",
+      text1: "The oldest and most popular route. Hut accommodation. Same charity model: visit children in Moshi, then climb. Pricing depends on group size, travel dates and package inclusions — request a current written quotation in USD.",
       text2: "Included: 25% donation, all accommodation, environmental responsibility, national park fees.",
       text3: "Day 1: Marangu Gate (1,860 m) to Mandara Hut (2,700 m) through rainforest. Then Horombo, Kibo, a midnight start via Gilman’s Point to Uhuru Peak, and descent to the gate.",
-      text4: "1 person $1,800. 2–4 people $1,600. 5 and above $1,350 per person. A registration fee is payable to Habari Foundation at booking.",
+      text4: "Your written quotation will set out the package cost, the charitable contribution, any registration fee, and the payment and cancellation terms.",
       text5: "Hut route. Same purpose: classrooms after the climb.",
       text6: "Write to habarifoundation@gmail.com to reserve a Marangu charity tour. You will meet the children the climb is meant to support before you walk.",
       register: "tours.html"
@@ -674,7 +674,7 @@
       img2: "images/giving-out-e1650552456361.jpg",
       text1: "Raise funds by climbing Kilimanjaro with Habari, then meet the children and classrooms the climb is meant to support. Routes include Machame, Lemosho and Marangu.",
       text2: "25% of each climb donation goes to students’ needs.",
-      text3: "Lemosho is preferred for scenery and a high summit success rate, from $2,100 per person. Machame is the classic 7-day trail. Marangu is the 5-day hut route from $1,350 in a group of five or more.",
+      text3: "Lemosho approaches from the west through forest and the Shira area. Machame is a seven-day journey through changing landscapes. Marangu is the five-day hut route. Pricing depends on the route, duration, group size, travel dates and package inclusions — request a current written quotation in USD.",
       text4: "You can self-fund the climb or confirm a minimum sponsorship pledge — typically double the cost of the adventure, less the registration fee.",
       text5: "Climb Kili. Change a life.",
       text6: "After Uhuru Peak, climbers return to Moshi. Contact Director Stan Wilfred to choose a route and a date that also includes time in our partner schools.",
