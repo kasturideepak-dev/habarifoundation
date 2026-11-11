@@ -2253,3 +2253,29 @@ a.cause-card:hover { color: inherit; }
   .contact-bar { padding: 24px 18px; }
   .contact-bar__item { padding-right: 0; }
 }
+
+/* ========== HOME: STATIC CAUSES GRID ========== */
+.causes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+.causes-grid .cause-card { max-width: none; display: flex; flex-direction: column; }
+.causes-grid .cause-card__content { flex: 1; display: flex; flex-direction: column; }
+.causes-grid .cause-card__text { flex: 1; }
+.causes-grid .cause-card__img img { height: 220px; }
+.causes-grid .cause-card__title { font-size: 22px; line-height: 30px; }
+.cause-progress--facts { padding-top: 18px; }
+@media (max-width: 1199px) {
+  .causes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .causes-grid { grid-template-columns: 1fr; }
+}
+.programs-grid .team-card__img img { height: 280px; }
+.v-team-strip { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-bottom: 30px; }
+.v-team-strip img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 8px 20px rgba(0,0,0,.12); }
+@media (max-width: 767px) { .v-team-strip img { width: 84px; height: 84px; } }
+/* The donate button's yellow bleed runs to 100vw; stop it widening the page. */
+html { overflow-x: hidden; overflow-x: clip; }

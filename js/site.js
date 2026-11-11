@@ -1,34 +1,58 @@
 (() => {
   const PAGE = document.body.dataset.page || "home";
 
+  const HFI = "https://habarifoundationinternational.org/";
+  const HA = "https://habariadventure.com/";
+  const ext = 'target="_blank" rel="noopener noreferrer"';
+  const on = (page, list) => (list.includes(page) ? "current" : "");
+
   const nav = (page) => `
     <ul class="main-menu">
-      <li class="${page === "home" ? "current" : ""}"><a href="index.html">Home</a></li>
-      <li class="${page === "about" ? "current" : ""}"><a href="about.html">About</a></li>
-      <li class="${["education", "health", "school", "projects"].includes(page) ? "current" : ""}">
-        <a href="education.html">Programs <i class="fa-solid fa-chevron-down"></i></a>
+      <li class="${on(page, ["about", "team", "contact"])}">
+        <a href="about.html">About Us <i class="fa-solid fa-chevron-down"></i></a>
         <ul>
-          <li><a href="education.html">Education Program</a></li>
-          <li><a href="health.html">Health Program</a></li>
-          <li><a href="school.html">School Project</a></li>
-          <li><a href="projects.html">Income Projects</a></li>
+          <li><a href="about.html#story">Our Story</a></li>
+          <li><a href="about.html#mission">Mission &amp; Vision</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </li>
-      <li class="${page === "tours" ? "current" : ""}"><a href="tours.html">Charity Tours</a></li>
-      <li class="${page === "gallery" ? "current" : ""}"><a href="gallery.html">Gallery</a></li>
-      <li class="${["events", "event-details"].includes(page) ? "current" : ""}"><a href="events.html">Events</a></li>
-      <li class="${page === "volunteers" ? "current" : ""}"><a href="volunteers.html">Volunteers</a></li>
-      <li class="${page === "faqs" ? "current" : ""}"><a href="faqs.html">FAQs</a></li>
+      <li class="${on(page, ["education", "health", "school", "projects", "community"])}">
+        <a href="index.html#programs">Our Work <i class="fa-solid fa-chevron-down"></i></a>
+        <ul>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="health.html">Health &amp; Wellbeing</a></li>
+          <li><a href="school.html">School Building Project</a></li>
+          <li><a href="projects.html">Community Livelihoods</a></li>
+          <li><a href="community.html#women">Local Women Project</a></li>
+          <li><a href="community.html#teachers">Teachers Project</a></li>
+          <li><a href="community.html#porters">Porters Project</a></li>
+        </ul>
+      </li>
+      <li class="${on(page, ["gallery", "events", "event-details"])}">
+        <a href="gallery.html">Our Impact <i class="fa-solid fa-chevron-down"></i></a>
+        <ul>
+          <li><a href="events.html">Project Updates</a></li>
+          <li><a href="gallery.html">Photo Gallery</a></li>
+        </ul>
+      </li>
+      <li class="${on(page, ["donate", "donate-details", "volunteers", "faqs"])}">
+        <a href="donate.html">Get Involved <i class="fa-solid fa-chevron-down"></i></a>
+        <ul>
+          <li><a href="donate.html">Sponsor a Child</a></li>
+          <li><a href="volunteers.html">Volunteer With Us</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="faqs.html">Supporter FAQs</a></li>
+        </ul>
+      </li>
+      <li class="${on(page, ["tours"])}"><a href="tours.html">Climb for a Cause</a></li>
       <li>
-        <a href="#">More <i class="fa-solid fa-chevron-down"></i></a>
+        <a href="#" onclick="return false">Our Partners <i class="fa-solid fa-chevron-down"></i></a>
         <ul>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Our team</a></li>
-          <li><a href="#">Coming soon</a></li>
+          <li><a href="${HA}" ${ext}>Habari Adventure</a></li>
+          <li><a href="${HFI}" ${ext}>Habari Foundation International</a></li>
         </ul>
       </li>
-      <li class="${page === "contact" ? "current" : ""}"><a href="contact.html">Contact</a></li>
     </ul>`;
 
   const header = `
@@ -70,7 +94,7 @@
         <div class="header-bottom">
           <button class="mobile-toggler" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
           ${nav(PAGE)}
-          <a href="https://gogetfunding.com/school-project-5/" class="header-donate" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-heart"></i> Donate now</a>
+          <a href="https://gogetfunding.com/school-project-5/" class="header-donate" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-heart"></i> Donate</a>
         </div>
       </div>
     </div>
@@ -79,8 +103,9 @@
     <div class="inner">
       <a href="index.html"><img src="images/LOGO-01-1.png" alt="Habari Foundation"></a>
       <div class="header-bottom">
+        <button class="mobile-toggler" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
         ${nav(PAGE)}
-        <a href="https://gogetfunding.com/school-project-5/" class="header-donate" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-heart"></i> Donate now</a>
+        <a href="https://gogetfunding.com/school-project-5/" class="header-donate" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-heart"></i> Donate</a>
       </div>
     </div>
   </div>
@@ -92,21 +117,28 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="education.html">Education Program</a></li>
-        <li><a href="health.html">Health Program</a></li>
-        <li><a href="school.html">School Project</a></li>
-        <li><a href="projects.html">Our Projects</a></li>
-        <li><a href="tours.html">Charity Tours</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="volunteers.html">Volunteers</a></li>
-        <li><a href="faqs.html">FAQs</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Our team</a></li>
-        <li><a href="#">Coming soon</a></li>
-        <li><a href="https://gogetfunding.com/school-project-5/" target="_blank" rel="noopener noreferrer">Donate / Sponsor</a></li>
+        <li class="sub"><a href="about.html#story">Our Story</a></li>
+        <li class="sub"><a href="about.html#mission">Mission &amp; Vision</a></li>
+        <li class="sub"><a href="team.html">Our Team</a></li>
+        <li><a href="index.html#programs">Our Work</a></li>
+        <li class="sub"><a href="education.html">Education</a></li>
+        <li class="sub"><a href="health.html">Health &amp; Wellbeing</a></li>
+        <li class="sub"><a href="school.html">School Building Project</a></li>
+        <li class="sub"><a href="projects.html">Community Livelihoods</a></li>
+        <li class="sub"><a href="community.html">Women, Teachers &amp; Porters</a></li>
+        <li><a href="gallery.html">Our Impact</a></li>
+        <li class="sub"><a href="events.html">Project Updates</a></li>
+        <li class="sub"><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="donate.html">Get Involved</a></li>
+        <li class="sub"><a href="donate.html">Sponsor a Child</a></li>
+        <li class="sub"><a href="volunteers.html">Volunteer With Us</a></li>
+        <li class="sub"><a href="events.html">Events</a></li>
+        <li class="sub"><a href="faqs.html">Supporter FAQs</a></li>
+        <li><a href="tours.html">Climb for a Cause</a></li>
+        <li><a href="${HA}" ${ext}>Habari Adventure</a></li>
+        <li><a href="${HFI}" ${ext}>Habari Foundation International</a></li>
         <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="https://gogetfunding.com/school-project-5/" ${ext}>Donate</a></li>
       </ul>
     </div>
   </div>`;
@@ -122,25 +154,29 @@
           <a class="footer-btn" href="https://gogetfunding.com/school-project-5/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-heart"></i> Donate now</a>
         </div>
         <div>
-          <h4 class="footer-title">Our Program</h4>
+          <h4 class="footer-title">Our Work</h4>
           <div class="footer-links">
-            <a href="education.html">Education Program</a><br>
-            <a href="health.html">Health Program</a><br>
-            <a href="school.html">School Project</a><br>
-            <a href="projects.html">Coffee &amp; Trees</a><br>
-            <a href="tours.html">Charity Tours</a>
+            <a href="education.html">Education</a><br>
+            <a href="health.html">Health &amp; Wellbeing</a><br>
+            <a href="school.html">School Building Project</a><br>
+            <a href="projects.html">Community Livelihoods</a><br>
+            <a href="community.html">Women, Teachers &amp; Porters</a><br>
+            <a href="tours.html">Climb for a Cause</a>
           </div>
         </div>
         <div>
           <h4 class="footer-title">Quick Links</h4>
           <div class="footer-links">
             <a href="about.html">About Us</a><br>
-            <a href="volunteers.html">Volunteers</a><br>
+            <a href="team.html">Our Team</a><br>
+            <a href="volunteers.html">Volunteer With Us</a><br>
             <a href="events.html">Events</a><br>
             <a href="gallery.html">Gallery</a><br>
             <a href="faqs.html">FAQs</a><br>
             <a href="donate.html">Sponsor a Child</a><br>
-            <a href="contact.html">Contact Us</a>
+            <a href="contact.html">Contact Us</a><br>
+            <a href="${HA}" ${ext}>Habari Adventure</a><br>
+            <a href="${HFI}" ${ext}>Habari Foundation International</a>
           </div>
         </div>
         <div>
@@ -209,7 +245,7 @@
     else heroVideo.play()?.catch(() => {});
   }
 
-  /* Causes carousel + filters */
+  /* Causes grid filters */
   const track = document.querySelector(".causes-track");
   const viewport = document.querySelector(".causes-carousel");
   const tabBtns = document.querySelectorAll(".tab-btn");
@@ -426,6 +462,63 @@
       ],
       summary2: "You can self-fund the climb or confirm a minimum sponsorship pledge — typically double the cost of the adventure, less the registration fee.",
       subject: "Join a charity climb"
+    },
+    women: {
+      cat: "Community",
+      title: "Start-up capital for local women",
+      img: "images/IMG_1654.jpg",
+      alt: "Women and children in a Kilimanjaro village",
+      text: "Habari Foundation provides local women with US$300–US$500 in small-business start-up capital, helping them establish income-generating activities, meet essential household needs, and support their children.",
+      raisedLabel: "Start-up capital",
+      raised: "US$300–500",
+      goalLabel: "Focus",
+      goal: "Women",
+      summary1: "Through this initiative, we promote financial independence, strengthen families, and create opportunities for a more secure future.",
+      points: [
+        "Small-business start-up capital of US$300–US$500",
+        "Income-generating activities chosen by each woman",
+        "Household needs met and children supported"
+      ],
+      summary2: "When a mother’s income is steady, her children are more likely to stay in school. Contact us to learn about current needs.",
+      subject: "Support the local women project"
+    },
+    teachers: {
+      cat: "Community",
+      title: "A monthly salary for volunteer teachers",
+      img: "images/client/education/classroom-lesson.jpg",
+      alt: "Pupils seated for a lesson",
+      text: "Habari Foundation recognizes the vital role volunteer teachers play in shaping children’s futures. The foundation provides each volunteer teacher with a monthly salary, paid on time, so they can continue serving in the schools we support.",
+      raisedLabel: "Salary",
+      raised: "Monthly",
+      goalLabel: "Paid",
+      goal: "On time",
+      summary1: "By supporting teachers, we strengthen education and create better learning opportunities for children.",
+      points: [
+        "A monthly salary for each volunteer teacher",
+        "Paid on time, every month",
+        "Teachers stay in the schools we support"
+      ],
+      summary2: "Contact us to learn about current teaching needs, funding requirements, and available opportunities.",
+      subject: "Support a volunteer teacher"
+    },
+    porters: {
+      cat: "Community",
+      title: "Training and care for guides and porters",
+      img: "images/Habari-Foundation-marangu.jpg",
+      alt: "A trekker looking out to Kilimanjaro",
+      text: "Through its connection with Habari Adventure, Habari Foundation supports mountain guides with professional training during the April and May low season, and supports eligible porters with quality hiking equipment and health insurance.",
+      raisedLabel: "Mweka course",
+      raised: "US$400",
+      goalLabel: "Training",
+      goal: "Apr–May",
+      summary1: "Selected porters aspiring to become guides receive full sponsorship for the US$400 training course at the College of African Wildlife Management (Mweka).",
+      points: [
+        "Low-season professional training for mountain guides",
+        "Quality hiking equipment and health insurance for eligible porters",
+        "Full Mweka course sponsorship for porters becoming guides"
+      ],
+      summary2: "Creating opportunities for career advancement within the tourism industry.",
+      subject: "Support guides and porters"
     }
   };
 

@@ -1,0 +1,115 @@
+/* School Project page */
+
+.sp-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px; }
+.sp-actions--center { justify-content: center; }
+.split-block__copy .sp-actions .thm-btn { align-self: auto; }
+
+.thm-btn.sp-btn-outline {
+  background: transparent;
+  box-shadow: inset 0 0 0 2px var(--black);
+}
+.thm-btn.sp-btn-outline:hover { box-shadow: inset 0 0 0 2px var(--black); }
+.thm-btn.sp-btn-light { box-shadow: inset 0 0 0 2px rgba(255,255,255,.7); color: var(--white); }
+.thm-btn.sp-btn-light::before { background: var(--primary); }
+.thm-btn.sp-btn-light:hover { color: var(--black); box-shadow: inset 0 0 0 2px var(--primary); }
+
+.sp-lead {
+  max-width: 760px;
+  margin: -20px auto 40px;
+  text-align: center;
+}
+
+.sp-aims-label { font-weight: 800; color: var(--black); margin-bottom: 4px !important; }
+
+/* What we plan to build */
+.sp-build-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+.sp-build-grid .value-card { height: 100%; }
+.sp-build-grid .value-card .ic { background: var(--primary); color: var(--black); }
+
+/* Ways to help */
+.sp-help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.sp-help-card {
+  display: flex; flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--bdr);
+  border-radius: var(--radius);
+  padding: 36px 30px 32px;
+  transition: .4s ease;
+}
+.sp-help-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,.08); border-color: transparent; }
+.sp-help-card .ic {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--base); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; margin-bottom: 18px;
+}
+.sp-help-card h3 { font-size: 22px; margin-bottom: 10px; }
+.sp-help-card p { color: var(--gray); font-size: 15px; margin-bottom: 24px; flex-grow: 1; }
+.sp-help-card .thm-btn { align-self: flex-start; padding: 14px 30px; }
+
+/* Photo grid with captions */
+.sp-photo-grid figure { margin: 0; }
+.sp-photo-grid figcaption {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1.4;
+}
+.sp-photo-note { text-align: center; margin-top: 40px; }
+
+/* Final CTA */
+.sp-cta {
+  position: relative;
+  padding: 120px 0;
+  background: var(--black);
+  overflow: hidden;
+  text-align: center;
+}
+.sp-cta__bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  mix-blend-mode: luminosity; opacity: .25;
+}
+.sp-cta .container { position: relative; z-index: 1; max-width: 860px; }
+.sp-cta .section-title { margin-bottom: 24px; }
+.sp-cta .section-title__tagline { color: var(--primary); }
+.sp-cta .section-title__title { color: var(--white); }
+.sp-cta p { color: #c5d0cd; margin-bottom: 14px; }
+.sp-cta .sp-actions { margin-top: 30px; }
+
+.sp-contact-row {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 12px 32px;
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,.15);
+  list-style: none;
+  font-size: 15px;
+}
+.sp-contact-row li { color: #c5d0cd; display: flex; align-items: center; gap: 8px; min-width: 0; }
+.sp-contact-row i { color: var(--primary); }
+.sp-contact-row a { color: var(--white); overflow-wrap: anywhere; }
+.sp-contact-row a:hover { color: var(--primary); }
+
+@media (max-width: 1199px) {
+  .sp-build-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 991px) {
+  .sp-help-grid { grid-template-columns: 1fr; }
+  .sp-cta { padding: 90px 0; }
+}
+@media (max-width: 767px) {
+  .sp-build-grid { grid-template-columns: 1fr; }
+  .sp-lead { margin-top: -10px; }
+  .sp-actions .thm-btn { padding: 14px 28px; }
+  .sp-contact-row { flex-direction: column; align-items: center; }
+}

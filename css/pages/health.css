@@ -1,0 +1,82 @@
+/* Health Project page */
+.hp-btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; }
+.split-block__copy .hp-btns .thm-btn { align-self: auto; }
+.thm-btn.hp-btn-ghost { background: transparent; box-shadow: inset 0 0 0 2px var(--black); }
+.thm-btn.hp-btn-ghost:hover { box-shadow: inset 0 0 0 2px var(--black); }
+
+.hp-split-media { min-height: 460px; }
+
+.section-title .hp-sub {
+  max-width: 720px; margin: 16px auto 0; font-size: 17px; line-height: 1.75;
+}
+
+/* 2x2 focus grid */
+.values-grid.hp-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* Steps */
+.hp-steps {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px;
+  counter-reset: none;
+}
+.hp-step {
+  background: #fff; border: 1px solid var(--bdr); border-radius: var(--radius);
+  padding: 30px 26px 26px; transition: .4s ease;
+}
+.hp-step:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,.08); border-color: transparent; }
+.hp-step__num {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--primary); color: var(--black);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head); font-weight: 900; font-size: 20px;
+  margin-bottom: 16px;
+}
+.hp-step h4 { font-size: 20px; margin-bottom: 8px; }
+.hp-step p { margin: 0; font-size: 15px; }
+.hp-center-btn { text-align: center; margin-top: 44px; }
+
+/* Support cards */
+.hp-support-card { display: flex; flex-direction: column; }
+.hp-support-card p { flex: 1; margin-bottom: 22px; }
+.hp-support-card .thm-btn { align-self: flex-start; padding: 13px 30px; }
+
+/* Gallery intro */
+.hp-gallery-intro { text-align: center; max-width: 720px; margin: -20px auto 40px; }
+
+/* Final CTA */
+.hp-cta {
+  background: var(--black); color: rgba(255,255,255,.82);
+  border-radius: var(--radius); padding: 70px 60px; text-align: center;
+}
+.hp-cta .section-title { margin-bottom: 24px; }
+.hp-cta .section-title__tagline { color: var(--primary); }
+.hp-cta .section-title__title { color: var(--white); }
+.hp-cta p { max-width: 720px; margin: 0 auto 12px; }
+.hp-cta .hp-btns { justify-content: center; margin-top: 28px; }
+.hp-cta .thm-btn.hp-btn-ghost { color: var(--white); box-shadow: inset 0 0 0 2px var(--white); }
+.hp-cta .thm-btn.hp-btn-ghost::before { background: var(--primary); }
+.hp-cta .thm-btn.hp-btn-ghost:hover { color: var(--black); }
+
+.hp-contact {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px;
+  margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.15);
+  font-size: 15px;
+}
+.hp-contact span, .hp-contact a { display: inline-flex; align-items: center; gap: 10px; color: rgba(255,255,255,.85); overflow-wrap: anywhere; }
+.hp-contact a:hover { color: var(--primary); }
+.hp-contact i { color: var(--primary); }
+
+@media (max-width: 1199px) {
+  .hp-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 991px) {
+  .hp-split-media { min-height: 340px; }
+  .hp-cta { padding: 50px 30px; }
+}
+@media (max-width: 767px) {
+  .page-section { padding: 80px 0; }
+  .values-grid.hp-grid-2, .hp-steps { grid-template-columns: 1fr; }
+  .hp-split-media { min-height: 260px; }
+  .hp-cta { padding: 40px 20px; }
+  .hp-btns .thm-btn { padding: 14px 28px; }
+  .hp-contact { flex-direction: column; align-items: center; }
+}
