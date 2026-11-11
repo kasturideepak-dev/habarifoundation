@@ -19,7 +19,7 @@
   background: #fff; border: 1px solid var(--bdr); border-radius: var(--radius);
   overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.06);
 }
-.team-profile__img { height: 380px; overflow: hidden; background: #1a2a27; }
+.team-profile__img { aspect-ratio: 1 / 1; overflow: hidden; background: #1a2a27; }
 .team-profile__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
 .team-profile:hover .team-profile__img img { transform: scale(1.04); }
 .team-profile__body { padding: 28px 32px 32px; }
@@ -33,10 +33,12 @@
 .thm-btn--ghost { background: transparent; box-shadow: inset 0 0 0 2px var(--black); }
 @media (max-width: 991px) {
   .team-profiles { grid-template-columns: 1fr; }
-  .team-profile__img { height: 420px; }
+  .team-profile { flex-direction: row; align-items: flex-start; }
+  .team-profile__img { flex: 0 0 40%; aspect-ratio: 4 / 5; }
 }
 @media (max-width: 767px) {
   .team-director { flex-direction: column; padding: 28px 22px; }
-  .team-profile__img { height: 340px; }
+  .team-profile { flex-direction: column; }
+  .team-profile__img { flex: none; width: 100%; aspect-ratio: 4 / 5; }
   .team-profile__body { padding: 22px 20px 26px; }
 }
